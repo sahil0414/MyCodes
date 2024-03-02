@@ -17,3 +17,18 @@ public:
         return false;
     }
 };
+=========================================================================================================================>
+class Solution {
+  public:
+    int binary_to_decimal(string str) {
+        
+        int DecNum = 0;
+        int n = str.size();
+        
+        for (int i = 0; i< n; i++)
+        {
+            DecNum += (str[i]-'0')*pow(2,n-i-1);
+        }
+        return DecNum;
+    }
+};
